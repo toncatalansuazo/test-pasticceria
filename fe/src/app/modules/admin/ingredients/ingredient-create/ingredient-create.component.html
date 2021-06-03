@@ -1,0 +1,11 @@
+<section class="container">
+  <mat-card>
+    <form [formGroup]="ingredientFG" (ngSubmit)="onSave()" class="ingredient-form" >
+      <mat-form-field appearance="fill">
+        <mat-label>name</mat-label>
+        <input formControlName="name" matInput>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Save</button>
+    </form>
+  </mat-card>
+</section>

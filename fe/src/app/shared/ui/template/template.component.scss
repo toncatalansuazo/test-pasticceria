@@ -1,0 +1,61 @@
+@import "../../../../styles.scss";
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5vh auto 5vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  overflow-x: hidden;
+}
+
+header,
+footer {
+}
+
+header {
+  background-color: $main-color;
+  grid-area: header;
+}
+main {
+  grid-area: main;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+aside {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  &.left-sidebar {
+    left: 0;
+    top: 0;
+    background-color: $second-color;
+  }
+  &.right-sidebar {
+    right: 0;
+    top: 0;
+    margin-right: 0;
+    background-color: $second-color;
+  }
+  &.left-sidebar--hide {
+    margin-left: -20%;
+    width: 0;
+  }
+  &.right-sidebar--hide {
+    margin-right: -20%;
+    width: 0;
+  }
+}
+footer {
+  grid-area: footer;
+  background-color: $main-color;
+  text-align: center;
+}
+.sidebar--show {
+  width: 100%;
+  grid-area: sidebar;
+}

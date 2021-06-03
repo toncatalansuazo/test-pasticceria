@@ -1,0 +1,21 @@
+:host {
+  height: 100vh;
+}
+mat-card, mat-list {
+  padding-top: 0px;
+}
+a {
+  text-decoration: none;
+}
+.is-active {
+  color: red;
+}
+.container-products {
+  padding: 20px;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  table {
+    width: 100%;
+  }
+}

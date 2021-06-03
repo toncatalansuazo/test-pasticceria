@@ -1,0 +1,13 @@
+:host,
+.container {
+  width: 100%;
+  mat-card {
+    margin: auto;
+    width: 80%;
+    margin-top: 5%;
+  }
+}
+.product-form {
+  display: flex;
+  flex-direction: column;
+}

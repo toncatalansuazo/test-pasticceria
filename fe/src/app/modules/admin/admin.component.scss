@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    margin-left: auto;
+    width: 25%;
+  }
+  a {
+    width: 25%;
+    text-align: end;
+    padding-right: 20px;
+  }
+}
+cs-admin-body {
+  display: flex;
+  color: black;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+}

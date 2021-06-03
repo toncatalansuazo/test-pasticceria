@@ -1,0 +1,27 @@
+<section class="sidebar">
+  <header class="sidebar__header">
+    <section class="sidebar__actions">
+      <button class="close-btn" (click)="onCloseSidebar()" mat-icon-button>
+        <mat-icon>close</mat-icon>
+      </button>
+    </section>
+    <ng-container *ngIf="(currentProduct$ | async) as product">
+      <h2>
+        {{ product.name | uppercase }}
+      </h2>
+    </ng-container>
+  </header>
+  <main>
+    <ng-container *ngIf="(currentProduct$ | async) as product">
+      <h2>{{ 'Ingredients in Product' | uppercase }}</h2>
+      <div *ngFor="let ingredient of product.ingredients; let i = index">
+        <mat-list role="list">
+          <mat-list-item role="listitem">{{ i }}){{ ingredient.name }}</mat-list-item>
+        </mat-list>
+
+      </div>
+    </ng-container>
+  </main>
+</section>
+
+

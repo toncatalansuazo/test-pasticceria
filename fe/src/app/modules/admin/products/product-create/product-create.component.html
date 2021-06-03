@@ -1,0 +1,37 @@
+<section class="container">
+  <mat-card>
+    <form [formGroup]="productFG" (ngSubmit)="onSave()" class="product-form" >
+      <mat-form-field appearance="fill">
+        <mat-label>name</mat-label>
+        <input formControlName="name" matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>img</mat-label>
+        <input formControlName="img" matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>price</mat-label>
+        <input type="number" formControlName="price" matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>stock</mat-label>
+        <input type="number" formControlName="stock" matInput>
+      </mat-form-field>
+      <div formArrayName="ingredients">
+        <p *ngFor="let ingredientFC of getIngredients()?.controls; let i = index">
+          <mat-checkbox
+            (change)="onChangeIngredient($event)"
+            [checked]="false"
+            [formControlName]="i"
+            [value]="ingredientFC.ingredient">
+
+            {{ ingredientFC.ingredient.name }}
+          </mat-checkbox>
+        </p>
+      </div>
+
+
+      <button mat-raised-button color="primary">Save/Edit</button>
+    </form>
+  </mat-card>
+</section>

@@ -1,0 +1,9 @@
+mat-card {
+  width: 60%;
+  margin: 10% auto 0 auto;
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,10 @@
+<section class="container-products" *ngIf="(products$| async) as products; else noProducts">
+  <cs-product-list [products]="products"
+    (selectProduct)="onSelectProduct($event)"
+    (showIngredients)="onShowIngredients($event)">
+  </cs-product-list>
+</section>
+<ng-template #noProducts>
+  sorry :( all products were sold
+</ng-template>
+

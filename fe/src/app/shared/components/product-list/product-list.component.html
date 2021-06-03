@@ -1,0 +1,11 @@
+<section class="products-container">
+  <ng-container *ngFor="let product of products">
+    <cs-product-detail
+      *ngIf="!product.expired"
+      [product]="product"
+      (click)="onSelectProduct(product)"
+      (showIngredients)="onShowIngredients($event)">
+    </cs-product-detail>
+  </ng-container>
+</section>
+

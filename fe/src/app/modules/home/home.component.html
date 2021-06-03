@@ -1,0 +1,14 @@
+<cs-template [showRightSidebar]="(isRightSideBarOpen$ | async) || false">
+  <section class="header" header>
+    <mat-icon aria-hidden="false">cake</mat-icon>
+    <h1>Luana & Maria</h1>
+
+    <a [routerLink]="['/admin']"><mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon></a>
+  </section>
+  <cs-home-body style="color: black" body>
+  </cs-home-body>
+  <cs-home-sidebar style="color: black" right-sidebar>
+  </cs-home-sidebar>
+  <section footer>
+  </section>
+</cs-template>
